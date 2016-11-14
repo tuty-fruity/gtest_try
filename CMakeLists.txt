@@ -5,7 +5,7 @@ project (gtest_gmock_exercise)
 #config_compiler_and_linker()
 
 add_subdirectory (googletest-master)
-add_compile_options(-std=c++11)
+#add_compile_options(-std=c++11)
 
 include_directories(exercise)
 add_subdirectory(exercise)
