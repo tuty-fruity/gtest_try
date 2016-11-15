@@ -1,10 +1,14 @@
 #include <gtest/gtest.h>
 #include "foo.hpp"
 
-class BankAccount : public testing::Test {
+class BankAccount
+{
 public:
-
     int balance;
+    BankAccount()
+    {
+        balance = 0;
+    }
 
     void deposit(int amount)
     {
@@ -12,7 +16,17 @@ public:
     }
 };
 
-// create Test Here
+class BankAccountTest : public testing::Test 
+{
+public:
+    
+};
+
+// create Test for deposit Here
+TEST_F(BankAccountTest, testDeposit)
+{
+
+}
 
 int main(int argc, char*argv[])
 {
