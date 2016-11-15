@@ -1,36 +1,18 @@
 #include <gtest/gtest.h>
-#include <gmock/gmock.h>
 #include "foo.hpp"
 
-class FooTest : public testing::Test
-{
+class BankAccount : public testing::Test {
 public:
-    Foo foo;
-    
-    FooTest() : foo(std::string("Peter"))
-    {
-    }
 
-    virtual void SetUp()
-    {
-    }
+    int balance;
 
-    virtual void TearDown()
+    void deposit(int amount)
     {
+        balance += amount;
     }
 };
 
-
-TEST_F(FooTest, testFooCreation)
-{
-    EXPECT_TRUE(&foo);
-}
-
-TEST_F(FooTest, testGetName)
-{
-    std::string expected("Peter");
-    EXPECT_EQ(expected, foo.getName());
-}
+// create Test Here
 
 int main(int argc, char*argv[])
 {
