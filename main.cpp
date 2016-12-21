@@ -1,20 +1,5 @@
 #include <gtest/gtest.h>
-#include "foo.hpp"
-
-class BankAccount
-{
-public:
-    int balance;
-    BankAccount()
-    {
-        balance = 0;
-    }
-
-    void deposit(int amount)
-    {
-        balance += amount;
-    }
-};
+#include "BankAccount.hpp"
 
 class BankAccountTest : public testing::Test 
 {

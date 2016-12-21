@@ -5,6 +5,7 @@ project (gtest_exercise)
 #config_compiler_and_linker()
 
 add_subdirectory (googletest-master)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
 #add_compile_options(-std=c++11)
 
 include_directories(exercise)
