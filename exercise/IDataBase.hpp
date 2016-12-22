@@ -4,6 +4,6 @@
 class IDataBase
 {
 public:
-    virtual ~IDataBase() = default;
+    virtual ~IDataBase() {}
     virtual bool connect(const std::string& hostname) = 0;
 };

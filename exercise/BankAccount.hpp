@@ -10,7 +10,7 @@ public:
     ~BankAccount();
 
     int checkBalance() override;
-    void deposit(const int& amount) override;
+    void deposit(const int& amount);
 
 private:
     IDataBase *m_db;
