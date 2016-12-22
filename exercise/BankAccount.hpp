@@ -9,7 +9,7 @@ public:
     BankAccount(IDataBase* db);
     ~BankAccount();
 
-    int checkBalance() override;
+    int checkBalance();
     void deposit(const int& amount);
 
 private:
