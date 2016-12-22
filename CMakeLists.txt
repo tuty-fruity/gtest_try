@@ -1,5 +1,5 @@
 cmake_minimum_required (VERSION 2.8)
-project (gtest_exercise)
+project (gtest_gmock_exercise)
 
 #set (gtest_disable_pthreads on)
 #config_compiler_and_linker()
