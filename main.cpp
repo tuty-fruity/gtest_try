@@ -1,19 +1,25 @@
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
 #include "BankAccount.hpp"
-#include "IDataBase.hpp"
+#include "DataBase.hpp"
 
-class BankAccountTest : public testing::Test 
+class DataBaseMock : public IDataBase 
+{
+public:
+    MOCK_METHOD1(connect, bool(const std::string& hostname));
+};
+
+class BankAccountTest : public testing::Test
 {
 public:
     BankAccountTest()
     {
-        db = new DataBaseMock();
-        bankAccount = new BankAccount(db);
     }
 
     void SetUp()
     {
+        dbMock = new DataBaseMock();
+        bankAccount = new BankAccount(dbMock);
     }
 
     void TearDown()
@@ -22,11 +28,9 @@ public:
     }
 
     BankAccount *bankAccount;
-    DataBaseMock *db;
+    DataBaseMock *dbMock;
 };
 
-
-// create Test for deposit Here
 TEST_F(BankAccountTest, testDeposit)
 {
 }
